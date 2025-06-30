@@ -170,7 +170,7 @@ static HRESULT DecompressArchive(
           #else
             item.Path;
           #endif
-        if (path.Find(L'/') == -1 && path.Find(L'\\') == -1)
+        if (path.Find(L'/') == -1 || path.Find(L'\\') == -1)
           firstLevelCount++;
         if (firstLevelCount > 1)
           break;
